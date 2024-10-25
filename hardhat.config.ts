@@ -3,30 +3,29 @@ import "@nomicfoundation/hardhat-toolbox";
 import { vars } from "hardhat/config";
 
 const ALCHEMY_API_KEY = vars.get("ALCHEMY_API_KEY");
-const BASESCAN_API_KEY = vars.get("BASESCAN_API_KEY");
+const ARB_API_KEY = vars.get("BASESCAN_API_KEY");
 
 const config: HardhatUserConfig = {
   solidity: "0.8.27",
   networks: {
-    base_sepolia: {
-      url: `https://base-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
+    arbitrumSepolia: {
+      url: `https://arb-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
       accounts: [vars.get("MY_KEY")],
     },
   },
   etherscan: {
-    apiKey: BASESCAN_API_KEY,
-
+    apiKey: ARB_API_KEY,
     customChains: [
-      {
-        network: "baseSepolia",
-        chainId: 84532,
-        urls: {
-          apiURL: "https://api-sepolia.basescan.org/api",
-          browserURL: "https://sepolia.basescan.org",
-        },
-      },
+        {
+            network: "arbitrumSepolia",
+            chainId: 421614,
+            urls: {
+                apiURL: "https://arb-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}",
+                browserURL: "https://sepolia.arbiscan.io/"
+            }
+        }
     ],
-  },
+},
 };
 
 export default config;
