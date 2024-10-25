@@ -5,7 +5,6 @@ import "./ProposalVote.sol";
 import {IProposalVote} from "./interface/IProposalVote.sol";
 
 contract ProposalVoteFactory {
-    
     struct DeployedContractInfo {
         address deployer;
         address deployedContract;
