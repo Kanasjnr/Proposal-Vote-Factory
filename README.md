@@ -1,1 +1,1 @@
-ProposalVoteFactoryContractAddress - 0x2608FD91C764431741Ca9157F4699ee4F2b52626
+ProposalVoteFactoryContractAddress - 0xd420e00d03c691D7E97df94ed090Cd7FBE79ce97
